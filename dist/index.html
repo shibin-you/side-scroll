@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>side-scroll</title>
+<meta name=" viewport " content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"><meta name="format-detection" content="telephone=no,email=no,date=no,address=no"><link href="css/main.css" rel="stylesheet"></head>
+
+<body>
+  <ul class="side-bar">
+    <li class="side-bar-item active">标题1</li>
+    <li class="side-bar-item">标题2</li>
+    <li class="side-bar-item">标题3</li>
+    <li class="side-bar-item">标题4</li>
+    <li class="side-bar-item">标题5</li>
+    <li class="side-bar-item">标题6</li>
+  </ul>
+  <ul class="content">
+    <li class="content-item">1</li>
+    <li class="content-item">2</li>
+    <li class="content-item">3</li>
+    <li class="content-item">4</li>
+    <li class="content-item">5</li>
+    <li class="content-item" style="height:1000px">6</li>
+  </ul>
+<script type="text/javascript" src="js/main.js"></script></body>
+<script type="text/javascript">
+  window.onready = function() {
+
+  }
+new SideBarScroll({
+  sideBarItems:document.getElementsByClassName('side-bar-item'),
+  contentItems:document.getElementsByClassName('content-item')
+})
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,14 @@
+.side-bar
+  position: fixed
+  left: 0
+  top: 50px
+  line-height: 30px
+  width: 150px
+
+.side-bar .side-bar-item
+  cursor: pointer
+.side-bar .side-bar-item.active
+  color: red
+.content li
+  height: 300px
+  margin-left: 150px
