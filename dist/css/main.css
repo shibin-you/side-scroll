@@ -1,7 +1,6 @@
 /*!
- * /*!
  *  * sider-bar-scroll.js v1.0.0
  *  * (c) 2019-2019 Shibin You
  *  * Released under the MIT License.
- *  * /
+ * 
  */*{margin:0;padding:0}li{list-style:none}.side-bar{position:fixed;left:0;top:50px;line-height:30px;width:150px}.side-bar .side-bar-item{cursor:pointer}.side-bar .side-bar-item.active{color:red}.content li{height:300px;margin-left:150px}

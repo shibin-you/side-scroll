@@ -4,10 +4,6 @@ import {
   addClass
 } from './util/dom'
 
-/**
-
-
-*/
 class SideBarScroll {
   constructor(opts) {
     initScoll(opts, this)
@@ -32,18 +28,17 @@ function initScoll(opts, sideBarScroll) {
       let currentIndex = sideBarScroll.currentIndex
       let sideBarItems = sideBarScroll.sideBarItems
       let listHeight = sideBarScroll.listHeight
-
       for (var i = 0, len = listHeight.length; i < len; i++) {
         if (this.scrollY >= listHeight[i] && this.scrollY < listHeight[i + 1]) {
-          removeClass(sideBarItems[currentIndex], 'active')
+          removeClass(sideBarItems[currentIndex], 'side-bar-active')
           sideBarScroll.currentIndex = currentIndex = i
-          addClass(sideBarItems[currentIndex], 'active')
+          addClass(sideBarItems[currentIndex], 'side-bar-active')
           return
         }
         if (!listHeight[i + 1]) {
-          removeClass(sideBarItems[currentIndex], 'active')
+          removeClass(sideBarItems[currentIndex], 'side-bar-active')
           sideBarScroll.currentIndex = currentIndex = i
-          addClass(sideBarItems[currentIndex], 'active')
+          addClass(sideBarItems[currentIndex], 'side-bar-active')
           return
         }
       }
@@ -63,7 +58,6 @@ function initListHeight(sideBarScroll) {
     let item = contentItems[i]
     let sideBar = sideBarItems[i]
     sideBarScroll.listHeight.push(height)
-
     height += item.clientHeight
     sideBar.setAttribute('data-index', i)
     sideBarItems[i].onclick = function() {

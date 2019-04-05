@@ -8,9 +8,9 @@ const TerserJSPlugin = require("terser-webpack-plugin");
 
 
 const isDev = process.env.NODE_ENV !== 'production'
-var filename = `[name].js`
+var filename = `side-bar-scroll.min.js`
 if (isDev) {
-  filename = `[name].min.js`
+  filename = `side-bar-scroll.js`
 }
 module.exports = {
   optimization: {
@@ -22,7 +22,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: resolve(__dirname, '../dist'),
-    filename: `js/[name].js`
+    filename: `js/${filename}`
   },
   module: {
     rules: [{

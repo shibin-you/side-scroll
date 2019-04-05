@@ -5,11 +5,9 @@ const webpack = require('webpack')
 const version = process.env.VERSION || require('../package.json').version
 
 const banner =
-  '/*!\n' +
   ` * sider-bar-scroll.js v${version}\n` +
   ` * (c) 2019-${new Date().getFullYear()} Shibin You\n` +
-  ' * Released under the MIT License.\n' +
-  ' */'
+  ' * Released under the MIT License.'
 
 const isDev = process.env.NODE_ENV !== 'production'
 var config
@@ -27,7 +25,7 @@ if (isDev) {
   config = merge(commonConfig, {
     mode: 'production',
     plugins:[new webpack.BannerPlugin({
-      banner: banner
+      banner
     })]
   })
 }

@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.client.js",
-    "build": "cross-env NODE_ENV=production webpack --config build/webpack.client.js "
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.client.js --progress",
+    "build": " rimraf dist && cross-env NODE_ENV=production  webpack --config build/webpack.client.js --progress"
   },
   "repository": {
     "type": "git",
